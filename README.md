@@ -22,17 +22,15 @@ npm run build
 
 ## Deployment (CI/CD)
 
-This repository includes a GitHub Actions workflow that builds the Vite site and deploys the `dist/` output to S3, then invalidates CloudFront.
+This repository includes a GitHub Actions workflow that builds the Vite site and deploys the `dist/` output to Google Cloud Storage.
 
 ### Required GitHub Secrets
 
 Configure the following repository secrets before deploying:
 
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-- `AWS_REGION`
-- `AWS_S3_BUCKET`
-- `CLOUDFRONT_ID`
+- `GCP_PROJECT_ID`
+- `GCP_SA_KEY` (service account JSON key)
+- `GCS_BUCKET`
 
 ### Deployment Workflow
 
@@ -41,9 +39,8 @@ The workflow performs these steps:
 1. Checkout the repository.
 2. Install Node 18 dependencies.
 3. Build the project with `npm run build`.
-4. Configure AWS credentials from GitHub Secrets.
-5. Sync `dist/` to the S3 bucket.
-6. Invalidate the CloudFront distribution cache.
+4. Authenticate to Google Cloud with GitHub Secrets.
+5. Sync `dist/` to the GCS bucket.
 
 ### How to Trigger Deployments
 
@@ -52,8 +49,7 @@ Push to the `main` or `master` branch and GitHub Actions will automatically run 
 ### Troubleshooting
 
 - **Build failures**: Ensure `npm install` and `npm run build` succeed locally.
-- **S3 sync errors**: Verify `AWS_S3_BUCKET` is set correctly and the IAM user has access to the bucket.
-- **CloudFront invalidation errors**: Confirm `CLOUDFRONT_ID` is correct and the IAM user has permission to create invalidations.
+- **GCS sync errors**: Verify `GCS_BUCKET` is set correctly and the service account has access to the bucket.
 - **Lockfile warnings**: If you add `package-lock.json` or `npm-shrinkwrap.json`, the workflow will use `npm ci` and enable dependency caching automatically.
 - **Missing secrets**: Ensure all required secrets are set in the repository settings before pushing to `main` or `master`.
 
