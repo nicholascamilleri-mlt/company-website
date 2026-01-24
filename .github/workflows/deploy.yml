@@ -21,13 +21,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-
       - name: Install dependencies
         run: |
           set -euo pipefail
           echo "Installing npm dependencies"
-          npm install
-
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
       - name: Build
         run: |
           set -euo pipefail
