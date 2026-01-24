@@ -73,5 +73,9 @@ jobs:
           GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
         run: |
           set -euo pipefail
+          if [ -z "${GCS_BUCKET:-}" ]; then
+            echo "Error: GCS_BUCKET is not set. Configure the GCS_BUCKET secret to the target bucket name." >&2
+            exit 1
+          fi
           echo "Syncing dist/ to gs://${GCS_BUCKET}"
           gsutil -m rsync -r -d dist/ "gs://${GCS_BUCKET}"
