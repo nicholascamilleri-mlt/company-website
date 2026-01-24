@@ -1,0 +1,20 @@
+.section {
+  padding: 80px 6vw;
+  display: grid;
+  gap: 32px;
+}
+
+.heading {
+  display: grid;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.heading p {
+  color: color-mix(in srgb, var(--text-color) 80%, transparent);
+}
+
+.content {
+  display: grid;
+  gap: 24px;
+}

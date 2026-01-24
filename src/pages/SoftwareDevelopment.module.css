@@ -1,0 +1,11 @@
+.heroCopy {
+  max-width: 680px;
+  color: color-mix(in srgb, var(--text-color) 85%, transparent);
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
