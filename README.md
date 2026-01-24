@@ -54,6 +54,7 @@ Push to the `main` or `master` branch and GitHub Actions will automatically run 
 - **Build failures**: Ensure `npm install` and `npm run build` succeed locally.
 - **S3 sync errors**: Verify `AWS_S3_BUCKET` is set correctly and the IAM user has access to the bucket.
 - **CloudFront invalidation errors**: Confirm `CLOUDFRONT_ID` is correct and the IAM user has permission to create invalidations.
+- **Lockfile warnings**: If you add `package-lock.json` or `npm-shrinkwrap.json`, the workflow will use `npm ci` and enable dependency caching automatically.
 - **Missing secrets**: Ensure all required secrets are set in the repository settings before pushing to `main` or `master`.
 
 ## Branding Configuration
