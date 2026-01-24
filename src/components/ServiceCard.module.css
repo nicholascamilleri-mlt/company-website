@@ -1,0 +1,28 @@
+.card {
+  background: var(--background-color);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--secondary-color) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 10%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--secondary-color) 12%, transparent);
+}
+
+.description {
+  color: color-mix(in srgb, var(--text-color) 85%, transparent);
+}
+
+.list {
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: color-mix(in srgb, var(--text-color) 80%, transparent);
+}

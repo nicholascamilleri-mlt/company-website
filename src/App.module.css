@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  padding: 80px 6vw;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}

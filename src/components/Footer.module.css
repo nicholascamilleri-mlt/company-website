@@ -1,0 +1,25 @@
+.footer {
+  padding: 48px 6vw;
+  background: var(--secondary-color);
+  color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.companyName {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.copy {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
