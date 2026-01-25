@@ -1,4 +1,4 @@
-import { FiCpu, FiLayers, FiUserCheck } from 'react-icons/fi';
+import { FiCpu, FiLayers, FiMap, FiUserCheck } from 'react-icons/fi';
 import SectionLayout from '../components/SectionLayout';
 import styles from './Consulting.module.css';
 
@@ -33,6 +33,18 @@ const Consulting = () => {
                 <span className={styles.featureBody}>
                   Using tools like ChatGPT, Gemini, and Zapier to automate emails, reports, CRM updates, and internal
                   workflows that boost efficiency.
+                </span>
+              </div>
+            </li>
+            <li className={styles.featureItem}>
+              <span className={styles.featureIcon} aria-hidden="true">
+                <FiMap />
+              </span>
+              <div className={styles.featureContent}>
+                <span className={styles.featureTitle}>Technology Adoption Roadmaps</span>
+                <span className={styles.featureBody}>
+                  Providing a clear roadmap for technology adoption with defined milestones that keep stakeholders
+                  aligned and progress measurable.
                 </span>
               </div>
             </li>
