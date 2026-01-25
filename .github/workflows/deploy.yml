@@ -1,4 +1,4 @@
-name: Deploy to Google Cloud Storage
+name: Deploy to Firebase Hosting
 
 on:
   push:
@@ -58,28 +58,13 @@ jobs:
           echo "Building the Vite app"
           npm run build
 
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
-
-      - name: Setup gcloud SDK
-        uses: google-github-actions/setup-gcloud@v2
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-
-      - name: Deploy to Google Cloud Storage
+      - name: Deploy to Firebase Hosting
         env:
-          GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
         run: |
           set -euo pipefail
-          if [ -z "${GCS_BUCKET:-}" ]; then
-            echo "Error: GCS_BUCKET is not set. Configure the GCS_BUCKET secret to the target bucket name." >&2
+          if [ -z "${FIREBASE_SERVICE_ACCOUNT:-}" ]; then
+            echo "Error: FIREBASE_SERVICE_ACCOUNT is not set. Configure the FIREBASE_SERVICE_ACCOUNT secret." >&2
             exit 1
           fi
-          if ! gsutil ls -b "gs://${GCS_BUCKET}" >/dev/null 2>&1; then
-            echo "Error: GCS bucket gs://${GCS_BUCKET} does not exist or is not accessible to the service account." >&2
-            exit 1
-          fi
-          echo "Syncing dist/ to gs://${GCS_BUCKET}"
-          gsutil -m rsync -r -d dist/ "gs://${GCS_BUCKET}"
+          npx --yes firebase-tools@latest deploy --only hosting
