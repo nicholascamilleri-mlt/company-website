@@ -66,7 +66,7 @@ Brand styling is loaded dynamically from the root `branding.json` file.
   "backgroundColor": "#F7F9FB",
   "textColor": "#1A1A1A",
   "accentColor": "#00C2B3",
-  "logoImage": "/TekNiLabs.png"
+  "logoImage": "TekNiLabs.png"
 }
 ```
 
