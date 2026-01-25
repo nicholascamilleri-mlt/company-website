@@ -23,6 +23,34 @@
   gap: 16px;
 }
 
+.featureItem {
+  background: color-mix(in srgb, var(--primary-color) 75%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 16%, transparent);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.featureIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 24%, transparent);
+}
+
+.featureContent {
+  display: grid;
+  gap: 4px;
+}
+
 .featureTitle {
   display: block;
   font-weight: 600;
