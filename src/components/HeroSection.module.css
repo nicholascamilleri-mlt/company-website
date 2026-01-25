@@ -51,3 +51,33 @@
   border-radius: 20px;
   background: color-mix(in srgb, var(--accent-color) 24%, transparent);
 }
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 72px 6vw 56px;
+    gap: 32px;
+  }
+
+  .panel {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 56px 5vw 40px;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .panel {
+    min-height: 180px;
+  }
+}

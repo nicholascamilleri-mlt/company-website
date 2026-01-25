@@ -26,3 +26,10 @@
   gap: 6px;
   color: color-mix(in srgb, var(--text-color) 80%, transparent);
 }
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+    min-height: 0;
+  }
+}

@@ -18,3 +18,17 @@
   display: grid;
   gap: 24px;
 }
+
+@media (max-width: 900px) {
+  .section {
+    padding: 64px 6vw;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 48px 5vw;
+    gap: 20px;
+  }
+}
