@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import SoftwareDevelopment from './pages/SoftwareDevelopment';
 import Training from './pages/Training';
+import WhoWeAre from './pages/WhoWeAre';
 import styles from './App.module.css';
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="/training" element={<Training />} />
         <Route path="/software-development" element={<SoftwareDevelopment />} />
         <Route path="/consulting" element={<Consulting />} />
+        <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/contact" element={<Contact companyName={branding.companyName} />} />
       </Routes>
       <Footer companyName={branding.companyName} tagline={branding.tagline} />
