@@ -67,4 +67,6 @@ jobs:
             echo "Error: FIREBASE_SERVICE_ACCOUNT is not set. Configure the FIREBASE_SERVICE_ACCOUNT secret." >&2
             exit 1
           fi
+          echo "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/firebase-service-account.json"
+          export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-service-account.json"
           npx --yes firebase-tools@latest deploy --only hosting
