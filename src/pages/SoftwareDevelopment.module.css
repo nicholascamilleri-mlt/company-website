@@ -1,16 +1,9 @@
 .primaryPanel {
-  background:
-    linear-gradient(var(--background-color), var(--background-color)) padding-box,
-    linear-gradient(
-        135deg,
-        color-mix(in srgb, var(--accent-color) 35%, transparent),
-        color-mix(in srgb, var(--secondary-color) 25%, transparent)
-      )
-      border-box;
+  background: #fff;
   border-radius: 24px;
   padding: 28px;
-  border: 1px solid transparent;
-  box-shadow: 0 24px 50px color-mix(in srgb, var(--secondary-color) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 10%, transparent);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--secondary-color) 8%, transparent);
   display: grid;
   gap: 18px;
 }
@@ -27,8 +20,8 @@
 }
 
 .featureItem {
-  background: color-mix(in srgb, var(--primary-color) 75%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent-color) 16%, transparent);
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 10%, transparent);
   border-radius: 18px;
   padding: 16px 18px;
   display: grid;
