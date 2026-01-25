@@ -83,3 +83,5 @@ jobs:
           fi
           echo "Syncing dist/ to gs://${GCS_BUCKET}"
           gsutil -m rsync -r -d dist/ "gs://${GCS_BUCKET}"
+          echo "Configuring static website hosting"
+          gsutil web set -m index.html -e 404.html "gs://$GCS_BUCKET"
