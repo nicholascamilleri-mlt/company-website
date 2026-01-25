@@ -17,6 +17,21 @@
   display: block;
 }
 
+.link .card {
+  cursor: pointer;
+}
+
+.link:hover .card,
+.link:focus-visible .card {
+  border-color: color-mix(in srgb, var(--accent-color) 35%, transparent);
+}
+
+.link:hover .header h3,
+.link:focus-visible .header h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .link:focus-visible .card {
   outline: 2px solid var(--accent-color);
   outline-offset: 4px;

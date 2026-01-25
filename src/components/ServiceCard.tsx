@@ -34,7 +34,11 @@ const ServiceCard = ({ title, description, items, icon, className, href }: Servi
   }
 
   return (
-    <Link className={styles.link} to={href}>
+    <Link
+      className={styles.link}
+      to={href}
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    >
       {content}
     </Link>
   );
