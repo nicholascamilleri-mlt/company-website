@@ -29,8 +29,14 @@ const Home = ({ companyName, tagline }: HomeProps) => {
           <ServiceCard
             title="Technology Consulting"
             description="Strategic guidance that turns complex decisions into actionable roadmaps for teams and executives."
-            items={["Digital transformation for SMEs", "AI & automation", "CTO-as-a-Service"]}
+            items={[
+              'Digital transformation for SMEs',
+              'AI & automation',
+              'Technology adoption roadmaps',
+              'CTO-as-a-Service'
+            ]}
             icon={<FiCompass />}
+            href="/consulting"
           />
           <ServiceCard
             title="Software Development"
@@ -43,6 +49,7 @@ const Home = ({ companyName, tagline }: HomeProps) => {
               "Operational readiness"
             ]}
             icon={<FiCode />}
+            href="/software-development"
           />
           <ServiceCard
             title="Training & Education"
@@ -55,6 +62,7 @@ const Home = ({ companyName, tagline }: HomeProps) => {
               "Role-based learning paths"
             ]}
             icon={<FiBookOpen />}
+            href="/training"
           />
         </div>
       </SectionLayout>
