@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 
 type HeaderProps = {
   companyName: string;
-  logoText: string;
+  logoImage: string;
 };
 
 const navItems = [
@@ -14,12 +14,15 @@ const navItems = [
   { label: 'Contact', path: '/contact' }
 ];
 
-const Header = ({ companyName, logoText }: HeaderProps) => {
+const Header = ({ companyName, logoImage }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div className={styles.brand}>
-        <span className={styles.logoText}>{logoText}</span>
-        <span className={styles.companyName}>{companyName}</span>
+        {logoImage ? (
+          <img className={styles.logoImage} src={logoImage} alt={companyName} />
+        ) : (
+          <span className={styles.companyName}>{companyName}</span>
+        )}
       </div>
       <nav className={styles.nav} aria-label="Primary">
         {navItems.map((item) => (

@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <Header companyName={branding.companyName} logoText={branding.logoText} />
+      <Header companyName={branding.companyName} logoImage={branding.logoImage} />
       <Routes>
         <Route path="/" element={<Home companyName={branding.companyName} tagline={branding.tagline} />} />
         <Route path="/training" element={<Training />} />

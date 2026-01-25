@@ -12,21 +12,23 @@
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
-}
-
-.logoText {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--primary-color);
-  letter-spacing: 0.04em;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 162px;
 }
 
 .companyName {
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
   color: var(--text-color);
+}
+
+.logoImage {
+  height: 57px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav {
@@ -64,5 +66,10 @@
   .nav {
     width: 100%;
     gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .brand {
+    align-self: flex-start;
   }
 }

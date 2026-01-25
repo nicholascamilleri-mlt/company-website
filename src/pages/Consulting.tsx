@@ -11,7 +11,7 @@ const Consulting = () => {
       >
         <div className={styles.heroCopy}>
           <p>
-            We help leadership teams translate technology priorities into actionable plans. TekNLabs provides the
+            We help leadership teams translate technology priorities into actionable plans. TekNiLabs provides the
             context, facilitation, and analysis needed to move from decisions to delivery.
           </p>
         </div>

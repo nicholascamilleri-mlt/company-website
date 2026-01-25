@@ -14,7 +14,7 @@ const Home = ({ companyName, tagline }: HomeProps) => {
     <main>
       <HeroSection
         title={`${companyName}: ${tagline}`}
-        description="We design, build, and teach practical technology that works in real environments. TekNLabs helps teams grow capability, deliver software, and make confident technology decisions."
+        description="We design, build, and teach practical technology that works in real environments. TekNiLabs helps teams grow capability, deliver software, and make confident technology decisions."
         ctaLabel="Plan a conversation"
         ctaHref="/contact"
         kicker={companyName}
@@ -49,10 +49,10 @@ const Home = ({ companyName, tagline }: HomeProps) => {
       >
         <div className={styles.ctaSection}>
           <p>
-            Talk with TekNLabs to align your goals, prioritize initiatives, and build a delivery plan that fits
+            Talk with TekNiLabs to align your goals, prioritize initiatives, and build a delivery plan that fits
             your organization.
           </p>
-          <CTAButton label="Start with TekNLabs" href="/contact" />
+          <CTAButton label="Start with TekNiLabs" href="/contact" />
         </div>
       </SectionLayout>
     </main>

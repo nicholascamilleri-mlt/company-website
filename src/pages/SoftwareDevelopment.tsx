@@ -11,7 +11,7 @@ const SoftwareDevelopment = () => {
       >
         <div className={styles.heroCopy}>
           <p>
-            TekNLabs partners with organizations to deliver reliable software products. We blend product thinking,
+            TekNiLabs partners with organizations to deliver reliable software products. We blend product thinking,
             engineering discipline, and pragmatic delivery to keep teams moving forward.
           </p>
         </div>

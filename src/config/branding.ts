@@ -6,7 +6,7 @@ export type BrandingConfig = {
   backgroundColor: string;
   textColor: string;
   accentColor: string;
-  logoText: string;
+  logoImage: string;
 };
 
 export const loadBranding = async (): Promise<BrandingConfig> => {

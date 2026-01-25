@@ -11,7 +11,7 @@ const Training = () => {
       >
         <div className={styles.heroCopy}>
           <p>
-            TekNLabs training programs are designed for real-world delivery. We balance theory with hands-on
+            TekNiLabs training programs are designed for real-world delivery. We balance theory with hands-on
             practice, so teams gain confidence applying new skills on active projects.
           </p>
         </div>
