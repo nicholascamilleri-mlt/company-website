@@ -2,6 +2,7 @@ import CTAButton from '../components/CTAButton';
 import HeroSection from '../components/HeroSection';
 import SectionLayout from '../components/SectionLayout';
 import ServiceCard from '../components/ServiceCard';
+import { FiBookOpen, FiCode, FiCompass } from 'react-icons/fi';
 import styles from './Home.module.css';
 
 type HomeProps = {
@@ -26,19 +27,34 @@ const Home = ({ companyName, tagline }: HomeProps) => {
       >
         <div className={styles.grid}>
           <ServiceCard
-            title="Training & Education"
-            description="Hands-on programs for engineers, analysts, and leaders that align learning with real delivery goals."
-            items={["Instructor-led cohorts", "Team upskilling", "Applied workshops"]}
+            title="Technology Consulting"
+            description="Strategic guidance that turns complex decisions into actionable roadmaps for teams and executives."
+            items={["Digital transformation for SMEs", "AI & automation", "CTO-as-a-Service"]}
+            icon={<FiCompass />}
           />
           <ServiceCard
             title="Software Development"
             description="Product engineering and delivery support that blends thoughtful architecture with steady execution."
-            items={["Discovery to deployment", "Modern web platforms", "Operational readiness"]}
+            items={[
+              "Discovery to deployment",
+              "Modern web platforms (React, Java, Cloud)",
+              "MVP and platform development",
+              "Integration and automation",
+              "Operational readiness"
+            ]}
+            icon={<FiCode />}
           />
           <ServiceCard
-            title="Technology Consulting"
-            description="Strategic guidance that turns complex decisions into actionable roadmaps for teams and executives."
-            items={["Technology strategy", "Transformation planning", "Governance support"]}
+            title="Training & Education"
+            description="Hands-on programs for engineers, analysts, and leaders that align learning with real delivery goals."
+            items={[
+              "Instructor-led cohorts in Virtual LIVE courses.",
+              "Team upskilling",
+              "Applied workshops",
+              "Practical AI training",
+              "Role-based learning paths"
+            ]}
+            icon={<FiBookOpen />}
           />
         </div>
       </SectionLayout>

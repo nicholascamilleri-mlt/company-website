@@ -1,5 +1,4 @@
 import SectionLayout from '../components/SectionLayout';
-import ServiceCard from '../components/ServiceCard';
 import styles from './Consulting.module.css';
 
 const Consulting = () => {
@@ -7,30 +6,33 @@ const Consulting = () => {
     <main>
       <SectionLayout
         title="Technology Consulting"
-        subtitle="Clear guidance for strategy, transformation, and advisory needs."
+        subtitle="Strategic guidance that turns complex decisions into actionable roadmaps for teams and executives."
       >
-        <div className={styles.heroCopy}>
-          <p>
-            We help leadership teams translate technology priorities into actionable plans. TekNiLabs provides the
-            context, facilitation, and analysis needed to move from decisions to delivery.
-          </p>
-        </div>
-        <div className={styles.grid}>
-          <ServiceCard
-            title="Strategy"
-            description="Direction-setting work that aligns technology with business goals."
-            items={["Roadmap development", "Portfolio alignment", "Capability assessment"]}
-          />
-          <ServiceCard
-            title="Transformation"
-            description="Operational guidance to modernize platforms, teams, and delivery practices."
-            items={["Cloud migration planning", "Operating model shifts", "Change enablement"]}
-          />
-          <ServiceCard
-            title="Advisory"
-            description="Ongoing support for leadership teams navigating complex decisions."
-            items={["Executive briefings", "Vendor evaluation", "Risk management"]}
-          />
+        <div className={styles.primaryPanel}>
+          <p className={styles.primaryTone}>Senior, trusted advisor, enterprise-grade.</p>
+          <ul className={styles.featureList}>
+            <li>
+              <span className={styles.featureTitle}>🧩 Digital Transformation for SMEs</span>
+              <span className={styles.featureBody}>
+                Helping small businesses modernise legacy systems, integrate platforms like Shopify or Google
+                Workspace, and streamline operations with scalable digital tools.
+              </span>
+            </li>
+            <li>
+              <span className={styles.featureTitle}>🤖 AI & Automation</span>
+              <span className={styles.featureBody}>
+                Using tools like ChatGPT, Gemini, and Zapier to automate emails, reports, CRM updates, and internal
+                workflows that boost efficiency.
+              </span>
+            </li>
+            <li>
+              <span className={styles.featureTitle}>🧠 CTO-as-a-Service</span>
+              <span className={styles.featureBody}>
+                Part-time technical leadership for startups and growing businesses — covering architecture, hiring,
+                scalability, and hands-on product guidance.
+              </span>
+            </li>
+          </ul>
         </div>
       </SectionLayout>
     </main>

@@ -9,9 +9,9 @@ type HeaderProps = {
 
 const navItems = [
   { label: 'Home', path: '/' },
+  { label: 'Technology Consulting', path: '/consulting' },
+  { label: 'Application Development', path: '/software-development' },
   { label: 'Training', path: '/training' },
-  { label: 'Software Development', path: '/software-development' },
-  { label: 'Consulting', path: '/consulting' },
   { label: 'Contact', path: '/contact' }
 ];
 

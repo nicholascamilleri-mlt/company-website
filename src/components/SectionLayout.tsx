@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import styles from './SectionLayout.module.css';
 
 type SectionLayoutProps = {
-  title: string;
+  title: ReactNode;
   subtitle?: string;
   children: ReactNode;
 };

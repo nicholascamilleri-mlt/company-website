@@ -1,11 +1,41 @@
-.heroCopy {
-  max-width: 680px;
-  color: color-mix(in srgb, var(--text-color) 85%, transparent);
-  font-size: 1.05rem;
+.primaryPanel {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color) 12%, transparent),
+    color-mix(in srgb, var(--secondary-color) 6%, transparent)
+  );
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid color-mix(in srgb, var(--accent-color) 18%, transparent);
+  box-shadow: 0 24px 50px color-mix(in srgb, var(--secondary-color) 14%, transparent);
+  display: grid;
+  gap: 18px;
 }
 
-.grid {
+.primaryTone {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.featureList {
+  list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  gap: 16px;
+}
+
+.featureTitle {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.featureBody {
+  display: block;
+  color: color-mix(in srgb, var(--text-color) 82%, transparent);
+}
+
+@media (max-width: 600px) {
+  .primaryPanel {
+    padding: 20px;
+  }
 }
