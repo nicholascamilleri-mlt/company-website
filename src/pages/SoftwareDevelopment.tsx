@@ -1,4 +1,5 @@
-import { FiCheckCircle, FiCode, FiCompass, FiLink, FiRocket } from 'react-icons/fi';
+import { FiCheckCircle, FiCode, FiCompass, FiLink } from 'react-icons/fi';
+import { FaRocket } from 'react-icons/fa';
 import SectionLayout from '../components/SectionLayout';
 import styles from './SoftwareDevelopment.module.css';
 
@@ -36,7 +37,7 @@ const SoftwareDevelopment = () => {
             </li>
             <li className={styles.featureItem}>
               <span className={styles.featureIcon} aria-hidden="true">
-                <FiRocket />
+                <FaRocket />
               </span>
               <div className={styles.featureContent}>
                 <span className={styles.featureTitle}>MVP and platform development</span>
