@@ -10,7 +10,7 @@ const leadershipTeam = [
     bio: [
       'Nicholas has over two decades of experience delivering complex technology platforms within London’s financial services and enterprise sectors, working across leading exchanges, investment banks, asset managers, energy trading organisations, and high-growth fintech startups.',
       'His career includes senior consulting and engineering roles at organisations such as London Stock Exchange Group, Credit Suisse, Standard Chartered Bank, Royal Bank of Scotland, Deutsche Bank, Goldman Sachs Asset Management, and BP, where he contributed to mission-critical risk, margin, market data, regulatory, and trading systems in highly regulated, high-availability environments.',
-      'More recently, he has been supporting hedge fund and trading operations through his current role at a top Mayfair, London hedge fund.',
+      'More recently, he has been supporting hedge fund and trading operations through his current role in hedge funds.',
       'As CTO and Principal Consultant, he remains hands-on across architecture, delivery, and client engagement, ensuring every engagement reflects enterprise-grade engineering standards and commercial pragmatism.'
     ]
   },
