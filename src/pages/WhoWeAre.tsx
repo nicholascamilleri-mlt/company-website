@@ -6,8 +6,9 @@ const leadershipTeam = [
     name: 'Nicholas Camilleri',
     title: 'CTO & Principal Consultant',
     bio: [
-      'Nicholas brings over 25 years of experience delivering large-scale, mission-critical technology platforms within leading financial services and enterprise organisations. He has held senior engineering and architecture roles at institutions including investment banks, hedge funds, and global technology firms, where he led the development and support of trading, risk, data, and operations systems.',
-      'He has worked in highly regulated, high-availability environments, partnering closely with front-office, risk, compliance, and executive teams. With deep expertise in Java, distributed systems, cloud infrastructure, and DevOps, Nicholas specialises in building resilient, scalable platforms that support complex business workflows.',
+      'Nicholas has over two decades of experience delivering complex technology platforms within London’s financial services and enterprise sectors, working across leading exchanges, investment banks, asset managers, energy trading organisations, and high-growth fintech startups.',
+      'His career includes senior consulting and engineering roles at organisations such as London Stock Exchange Group, Credit Suisse, Standard Chartered Bank, Royal Bank of Scotland, Deutsche Bank, Goldman Sachs Asset Management, and BP, where he contributed to mission-critical risk, margin, market data, regulatory, and trading systems in highly regulated, high-availability environments.',
+      'More recently, he has been supporting hedge fund and trading operations through his current role at Rokos Capital Management.',
       'As CTO and Principal Consultant, he remains hands-on across architecture, delivery, and client engagement, ensuring every engagement reflects enterprise-grade engineering standards and commercial pragmatism.'
     ]
   },
