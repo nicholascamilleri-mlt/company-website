@@ -1,8 +1,10 @@
+import { FiAward, FiBookOpen, FiBriefcase, FiCheckCircle, FiCpu, FiTrendingUp, FiUser, FiUsers } from 'react-icons/fi';
 import SectionLayout from '../components/SectionLayout';
 import styles from './WhoWeAre.module.css';
 
 const leadershipTeam = [
   {
+    icon: <FiBriefcase aria-hidden="true" />,
     name: 'Nicholas Camilleri',
     title: 'CTO & Principal Consultant',
     bio: [
@@ -13,6 +15,7 @@ const leadershipTeam = [
     ]
   },
   {
+    icon: <FiUser aria-hidden="true" />,
     name: 'Iveta',
     title: 'Client Success Manager',
     bio: [
@@ -21,6 +24,7 @@ const leadershipTeam = [
     ]
   },
   {
+    icon: <FiBookOpen aria-hidden="true" />,
     name: 'Tom',
     title: 'Technical Training Lead',
     bio: [
@@ -32,22 +36,27 @@ const leadershipTeam = [
 
 const values = [
   {
+    icon: <FiAward aria-hidden="true" />,
     title: 'Integrity',
     description: 'Straightforward advice, clear commitments, and delivery grounded in trust.'
   },
   {
+    icon: <FiCpu aria-hidden="true" />,
     title: 'Technical excellence',
     description: 'Senior-led engineering, rigorous design, and systems that perform under pressure.'
   },
   {
+    icon: <FiCheckCircle aria-hidden="true" />,
     title: 'Practical delivery',
     description: 'Plans that translate into action, with clarity on scope, milestones, and outcomes.'
   },
   {
+    icon: <FiUsers aria-hidden="true" />,
     title: 'Client partnership',
     description: 'Long-term collaboration that aligns teams, stakeholders, and business priorities.'
   },
   {
+    icon: <FiTrendingUp aria-hidden="true" />,
     title: 'Measurable outcomes',
     description: 'Clear success metrics that demonstrate impact and continuous improvement.'
   }
@@ -56,10 +65,7 @@ const values = [
 const WhoWeAre = () => {
   return (
     <main>
-      <SectionLayout
-        title="Who We Are"
-        subtitle="A senior-led consultancy delivering technology, training, and transformation with clarity and precision."
-      >
+      <SectionLayout title="Who We Are">
         <div className={styles.overview}>
           <p>
             TekniLabs is founded and led by experienced practitioners who stay close to every engagement. Our
@@ -92,7 +98,8 @@ const WhoWeAre = () => {
           {leadershipTeam.map((member) => (
             <article key={member.name} className={styles.teamCard}>
               <div className={styles.teamHeader}>
-                <div>
+                <span className={styles.teamIcon}>{member.icon}</span>
+                <div className={styles.teamMeta}>
                   <h3>{member.name}</h3>
                   <p>{member.title}</p>
                 </div>
@@ -125,8 +132,11 @@ const WhoWeAre = () => {
         <div className={styles.valuesGrid}>
           {values.map((value) => (
             <article key={value.title} className={styles.valueCard}>
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
+              <span className={styles.valueIcon}>{value.icon}</span>
+              <div>
+                <h3>{value.title}</h3>
+                <p>{value.description}</p>
+              </div>
             </article>
           ))}
         </div>
