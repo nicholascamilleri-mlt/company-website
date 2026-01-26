@@ -1,10 +1,15 @@
 import { FiCpu, FiTarget, FiTool, FiUsers, FiVideo } from 'react-icons/fi';
 import SectionLayout from '../components/SectionLayout';
+import Seo from '../components/Seo';
 import styles from './Training.module.css';
 
 const Training = () => {
   return (
     <main>
+      <Seo
+        title="Training & Education | TekNiLabs"
+        description="Hands-on technology training for engineers, analysts, and leaders aligned to real delivery goals."
+      />
       <SectionLayout
         title="Training & Education"
         subtitle="Hands-on programs for engineers, analysts, and leaders that align learning with real delivery goals."

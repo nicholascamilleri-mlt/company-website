@@ -1,6 +1,8 @@
 import CTAButton from '../components/CTAButton';
+import ConsultationOffer from '../components/ConsultationOffer';
 import HeroSection from '../components/HeroSection';
 import SectionLayout from '../components/SectionLayout';
+import Seo from '../components/Seo';
 import ServiceCard from '../components/ServiceCard';
 import { FiBookOpen, FiCode, FiCompass } from 'react-icons/fi';
 import styles from './Home.module.css';
@@ -13,6 +15,10 @@ type HomeProps = {
 const Home = ({ companyName, tagline }: HomeProps) => {
   return (
     <main>
+      <Seo
+        title={`${companyName} | ${tagline}`}
+        description="TekNiLabs delivers consulting, software development, and training to help teams make confident technology decisions."
+      />
       <HeroSection
         title={`${companyName}: ${tagline}`}
         description="We design, build, and teach practical technology that works in real environments. TekNiLabs helps teams grow capability, deliver software, and make confident technology decisions."
@@ -65,6 +71,7 @@ const Home = ({ companyName, tagline }: HomeProps) => {
             href="/training"
           />
         </div>
+        <ConsultationOffer className={styles.consultationOffer} />
       </SectionLayout>
 
       <SectionLayout

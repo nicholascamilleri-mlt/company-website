@@ -58,6 +58,10 @@
   color: color-mix(in srgb, var(--text-color) 82%, transparent);
 }
 
+.consultationOffer {
+  margin-top: 20px;
+}
+
 @media (max-width: 600px) {
   .primaryPanel {
     padding: 20px;
