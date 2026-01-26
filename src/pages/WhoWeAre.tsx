@@ -1,18 +1,21 @@
+import { FiAward, FiBookOpen, FiBriefcase, FiCheckCircle, FiCpu, FiTrendingUp, FiUser, FiUsers } from 'react-icons/fi';
 import SectionLayout from '../components/SectionLayout';
 import styles from './WhoWeAre.module.css';
 
 const leadershipTeam = [
   {
+    icon: <FiBriefcase aria-hidden="true" />,
     name: 'Nicholas Camilleri',
     title: 'CTO & Principal Consultant',
     bio: [
       'Nicholas has over two decades of experience delivering complex technology platforms within London’s financial services and enterprise sectors, working across leading exchanges, investment banks, asset managers, energy trading organisations, and high-growth fintech startups.',
       'His career includes senior consulting and engineering roles at organisations such as London Stock Exchange Group, Credit Suisse, Standard Chartered Bank, Royal Bank of Scotland, Deutsche Bank, Goldman Sachs Asset Management, and BP, where he contributed to mission-critical risk, margin, market data, regulatory, and trading systems in highly regulated, high-availability environments.',
-      'More recently, he has been supporting hedge fund and trading operations through his current role at Rokos Capital Management.',
+      'More recently, he has been supporting hedge fund and trading operations through his current role in hedge funds.',
       'As CTO and Principal Consultant, he remains hands-on across architecture, delivery, and client engagement, ensuring every engagement reflects enterprise-grade engineering standards and commercial pragmatism.'
     ]
   },
   {
+    icon: <FiUser aria-hidden="true" />,
     name: 'Iveta',
     title: 'Client Success Manager',
     bio: [
@@ -21,6 +24,7 @@ const leadershipTeam = [
     ]
   },
   {
+    icon: <FiBookOpen aria-hidden="true" />,
     name: 'Tom',
     title: 'Technical Training Lead',
     bio: [
@@ -32,22 +36,27 @@ const leadershipTeam = [
 
 const values = [
   {
+    icon: <FiAward aria-hidden="true" />,
     title: 'Integrity',
     description: 'Straightforward advice, clear commitments, and delivery grounded in trust.'
   },
   {
+    icon: <FiCpu aria-hidden="true" />,
     title: 'Technical excellence',
     description: 'Senior-led engineering, rigorous design, and systems that perform under pressure.'
   },
   {
+    icon: <FiCheckCircle aria-hidden="true" />,
     title: 'Practical delivery',
     description: 'Plans that translate into action, with clarity on scope, milestones, and outcomes.'
   },
   {
+    icon: <FiUsers aria-hidden="true" />,
     title: 'Client partnership',
     description: 'Long-term collaboration that aligns teams, stakeholders, and business priorities.'
   },
   {
+    icon: <FiTrendingUp aria-hidden="true" />,
     title: 'Measurable outcomes',
     description: 'Clear success metrics that demonstrate impact and continuous improvement.'
   }
@@ -55,18 +64,8 @@ const values = [
 
 const WhoWeAre = () => {
   return (
-    <main className={styles.page}>
-      <header className={styles.hero}>
-        <div className={styles.heroContent}>
-          <p className={styles.kicker}>TekniLabs</p>
-          <h1>Who We Are</h1>
-          <p className={styles.subtitle}>
-            A senior-led consultancy delivering technology, training, and transformation with clarity and precision.
-          </p>
-        </div>
-      </header>
-
-      <SectionLayout title="Overview">
+    <main>
+      <SectionLayout title="Who We Are">
         <div className={styles.overview}>
           <p>
             TekniLabs is founded and led by experienced practitioners who stay close to every engagement. Our
@@ -99,7 +98,8 @@ const WhoWeAre = () => {
           {leadershipTeam.map((member) => (
             <article key={member.name} className={styles.teamCard}>
               <div className={styles.teamHeader}>
-                <div>
+                <span className={styles.teamIcon}>{member.icon}</span>
+                <div className={styles.teamMeta}>
                   <h3>{member.name}</h3>
                   <p>{member.title}</p>
                 </div>
@@ -132,8 +132,11 @@ const WhoWeAre = () => {
         <div className={styles.valuesGrid}>
           {values.map((value) => (
             <article key={value.title} className={styles.valueCard}>
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
+              <span className={styles.valueIcon}>{value.icon}</span>
+              <div>
+                <h3>{value.title}</h3>
+                <p>{value.description}</p>
+              </div>
             </article>
           ))}
         </div>

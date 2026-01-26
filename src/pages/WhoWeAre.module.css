@@ -1,57 +1,18 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.hero {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color) 18%, #fff), #fff);
-  border-radius: 28px;
-  padding: 56px clamp(24px, 6vw, 64px);
-  box-shadow: 0 24px 60px color-mix(in srgb, var(--secondary-color) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--secondary-color) 12%, transparent);
-}
-
-.heroContent {
-  display: grid;
-  gap: 16px;
-  max-width: 720px;
-}
-
-.kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.32em;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: color-mix(in srgb, var(--secondary-color) 80%, transparent);
-}
-
-.hero h1 {
-  font-size: clamp(2.1rem, 2.8vw, 3rem);
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 1.05rem;
-  color: color-mix(in srgb, var(--text-color) 80%, transparent);
-  margin: 0;
-}
-
 .overview {
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
 .overviewHighlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .overviewHighlights div {
   background: #fff;
   border-radius: 18px;
-  padding: 18px 20px;
+  padding: 16px 18px;
   border: 1px solid color-mix(in srgb, var(--secondary-color) 10%, transparent);
   box-shadow: 0 16px 36px color-mix(in srgb, var(--secondary-color) 6%, transparent);
 }
@@ -68,17 +29,17 @@
 
 .teamGrid {
   display: grid;
-  gap: 24px;
+  gap: 18px;
 }
 
 .teamCard {
   background: #fff;
   border-radius: 24px;
-  padding: 24px;
+  padding: 20px;
   border: 1px solid color-mix(in srgb, var(--secondary-color) 12%, transparent);
   box-shadow: 0 18px 40px color-mix(in srgb, var(--secondary-color) 8%, transparent);
   display: grid;
-  gap: 16px;
+  gap: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -89,9 +50,26 @@
 
 .teamHeader {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+}
+
+.teamIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 24%, transparent);
+  flex-shrink: 0;
+}
+
+.teamMeta {
+  display: grid;
+  gap: 4px;
 }
 
 .teamHeader h3 {
@@ -100,36 +78,40 @@
 }
 
 .teamHeader p {
-  margin: 6px 0 0;
+  margin: 0;
   font-weight: 600;
   color: color-mix(in srgb, var(--accent-color) 70%, var(--text-color));
 }
 
 .teamBio {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   color: color-mix(in srgb, var(--text-color) 84%, transparent);
 }
 
 .network {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   color: color-mix(in srgb, var(--text-color) 85%, transparent);
 }
 
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  gap: 14px;
 }
 
 .valueCard {
   background: #fff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 18px;
   border: 1px solid color-mix(in srgb, var(--secondary-color) 12%, transparent);
   box-shadow: 0 14px 32px color-mix(in srgb, var(--secondary-color) 6%, transparent);
   transition: transform 0.3s ease, border-color 0.3s ease;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
 }
 
 .valueCard:hover {
@@ -138,7 +120,7 @@
 }
 
 .valueCard h3 {
-  margin: 0 0 8px;
+  margin: 0 0 6px;
 }
 
 .valueCard p {
@@ -146,12 +128,29 @@
   color: color-mix(in srgb, var(--text-color) 78%, transparent);
 }
 
-@media (max-width: 700px) {
-  .hero {
-    padding: 40px 22px;
-  }
+.valueIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-color) 24%, transparent);
+}
 
+@media (max-width: 700px) {
   .teamCard {
     padding: 20px;
+  }
+
+  .valueCard {
+    grid-template-columns: 1fr;
+  }
+
+  .valueIcon {
+    width: 36px;
+    height: 36px;
   }
 }
