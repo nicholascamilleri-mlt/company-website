@@ -10,7 +10,7 @@ type HeaderProps = {
 const navItems = [
   { label: 'Home', path: '/' },
   { label: 'Who We Are', path: '/who-we-are' },
-  { label: 'Technology Consulting', path: '/consulting' },
+  { label: 'Consulting', path: '/consulting' },
   { label: 'Application Development', path: '/software-development' },
   { label: 'Training', path: '/training' },
   { label: 'Contact', path: '/contact' }

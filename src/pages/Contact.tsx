@@ -1,5 +1,6 @@
 import CTAButton from '../components/CTAButton';
 import SectionLayout from '../components/SectionLayout';
+import Seo from '../components/Seo';
 import styles from './Contact.module.css';
 
 type ContactProps = {
@@ -9,6 +10,10 @@ type ContactProps = {
 const Contact = ({ companyName }: ContactProps) => {
   return (
     <main>
+      <Seo
+        title={`Contact | ${companyName}`}
+        description="Get in touch with TekNiLabs to discuss consulting, software delivery, or training support."
+      />
       <SectionLayout
         title="Contact"
         subtitle="Tell us about your goals and we will respond with a clear next step."

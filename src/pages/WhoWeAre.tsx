@@ -1,5 +1,6 @@
 import { FiAward, FiBookOpen, FiBriefcase, FiCheckCircle, FiCpu, FiTrendingUp, FiUser, FiUsers } from 'react-icons/fi';
 import SectionLayout from '../components/SectionLayout';
+import Seo from '../components/Seo';
 import styles from './WhoWeAre.module.css';
 
 const leadershipTeam = [
@@ -65,6 +66,10 @@ const values = [
 const WhoWeAre = () => {
   return (
     <main>
+      <Seo
+        title="Who We Are | TekNiLabs"
+        description="Meet the senior consultants and delivery leaders guiding TekNiLabs engagements."
+      />
       <SectionLayout title="Who We Are">
         <div className={styles.overview}>
           <p>

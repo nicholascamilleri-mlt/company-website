@@ -1,11 +1,16 @@
 import { FiCheckCircle, FiCode, FiCompass, FiLink } from 'react-icons/fi';
 import { FaRocket } from 'react-icons/fa';
 import SectionLayout from '../components/SectionLayout';
+import Seo from '../components/Seo';
 import styles from './SoftwareDevelopment.module.css';
 
 const SoftwareDevelopment = () => {
   return (
     <main>
+      <Seo
+        title="Software Development | TekNiLabs"
+        description="Delivery-focused software development and engineering support for modern, scalable platforms."
+      />
       <SectionLayout
         title="Software Development"
         subtitle="Product engineering and delivery support that blends thoughtful architecture with steady execution."

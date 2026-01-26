@@ -1,10 +1,16 @@
 import { FiCpu, FiLayers, FiMap, FiUserCheck } from 'react-icons/fi';
+import ConsultationOffer from '../components/ConsultationOffer';
 import SectionLayout from '../components/SectionLayout';
+import Seo from '../components/Seo';
 import styles from './Consulting.module.css';
 
 const Consulting = () => {
   return (
     <main>
+      <Seo
+        title="Consulting | TekNiLabs"
+        description="Senior-led technology consulting to align strategy, roadmaps, and delivery for lasting outcomes."
+      />
       <SectionLayout
         title="Technology Consulting"
         subtitle="Strategic guidance that turns complex decisions into actionable roadmaps for teams and executives."
@@ -61,6 +67,7 @@ const Consulting = () => {
               </div>
             </li>
           </ul>
+          <ConsultationOffer className={styles.consultationOffer} />
         </div>
       </SectionLayout>
     </main>
