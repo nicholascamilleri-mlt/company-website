@@ -1,4 +1,4 @@
-import { FiAward, FiBookOpen, FiBriefcase, FiCheckCircle, FiCpu, FiTrendingUp, FiUser, FiUsers } from 'react-icons/fi';
+import { FiAward, FiBookOpen, FiBriefcase, FiCheckCircle, FiCpu, FiTrendingUp, FiUsers } from 'react-icons/fi';
 import SectionLayout from '../components/SectionLayout';
 import Seo from '../components/Seo';
 import styles from './WhoWeAre.module.css';
@@ -13,15 +13,6 @@ const leadershipTeam = [
       'His career includes senior consulting and engineering roles at at various investment banks and trading houses including Credit Suisse, Standard Chartered Bank, Royal Bank of Scotland, Deutsche Bank, GS Asset Management and BP Trading arm where he contributed to mission-critical risk, margin, market data, regulatory, and trading systems in highly regulated, high-availability environments.',
       'He also has worked in Software houses, Startups, Fintech and Hedge Funds, delivering scalable platforms and solutions across diverse business models and technical architectures.',
       'As CTO and Principal Consultant, he remains hands-on across architecture, delivery, and client engagement, ensuring every engagement reflects enterprise-grade engineering standards and commercial pragmatism.'
-    ]
-  },
-  {
-    icon: <FiUser aria-hidden="true" />,
-    name: 'Iveta',
-    title: 'Client Success Manager',
-    bio: [
-      'Iveta leads client engagement and delivery coordination across TekniLabs’ consulting and training programmes. She ensures that projects run smoothly from onboarding through to completion, acting as the primary point of contact for clients and partners.',
-      'Her focus is on communication, quality assurance, and long-term relationships — making sure every client receives a consistent, professional, and results-driven experience.'
     ]
   },
   {
