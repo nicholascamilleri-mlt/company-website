@@ -53,7 +53,7 @@ const BlogIndex = () => {
     <main className={styles.page}>
       <Seo
         title="Blog | TekniLabs"
-        description="Practical insights on digital systems, automation, and sustainable growth for modern teams."
+        description="Practical insights on digital systems, automation, and growth, with short, actionable guidance for leaders building stronger operations and clarity."
       />
 
       <section className={styles.hero}>

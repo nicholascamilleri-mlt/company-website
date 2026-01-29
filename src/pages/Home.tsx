@@ -16,7 +16,7 @@ const Home = ({ companyName, tagline }: HomeProps) => {
     <main>
       <Seo
         title={`${companyName} | ${tagline}`}
-        description="TekNiLabs delivers consulting, software development, and training to help teams make confident technology decisions."
+        description="TekNiLabs delivers consulting, engineering, and training to help growing businesses automate work, adopt AI responsibly, and build reliable systems."
       />
       <HeroSection
         title="Get your business technology roadmap"

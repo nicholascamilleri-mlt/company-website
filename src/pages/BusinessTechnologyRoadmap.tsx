@@ -9,7 +9,7 @@ const BusinessTechnologyRoadmap = () => {
     <main>
       <Seo
         title="Business Technology Roadmap | TekniLabs"
-        description="Share a few details about your business so TekniLabs can prepare a focused technology roadmap."
+        description="Share a few details about your business and receive a focused technology roadmap that highlights quick wins, priorities, and near-term delivery steps."
       />
       <SectionLayout
         title="Your business technology roadmap"

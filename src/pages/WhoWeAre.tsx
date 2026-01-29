@@ -59,7 +59,7 @@ const WhoWeAre = () => {
     <main>
       <Seo
         title="Who We Are | TekNiLabs"
-        description="Meet the senior consultants and delivery leaders guiding TekNiLabs engagements."
+        description="Meet the senior consultants and delivery leaders guiding TekNiLabs engagements with hands-on oversight, practical execution, and trusted partnerships."
       />
       <SectionLayout title="Who We Are">
         <div className={styles.overview}>

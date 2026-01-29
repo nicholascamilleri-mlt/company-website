@@ -9,7 +9,7 @@ const Consulting = () => {
     <main>
       <Seo
         title="Consulting | TekNiLabs"
-        description="Senior-led technology consulting to align strategy, roadmaps, and delivery for lasting outcomes."
+        description="Senior-led technology consulting for SMEs, aligning strategy, roadmaps, and delivery with clear priorities, measurable outcomes, and confident execution."
       />
       <SectionLayout
         title="Technology Consulting"

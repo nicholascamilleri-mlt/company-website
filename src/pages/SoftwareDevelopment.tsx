@@ -9,7 +9,7 @@ const SoftwareDevelopment = () => {
     <main>
       <Seo
         title="Software Development | TekNiLabs"
-        description="Delivery-focused software development and engineering support for modern, scalable platforms."
+        description="Delivery-focused software development for scalable platforms, from discovery to launch, with integration, automation, and operational readiness for teams."
       />
       <SectionLayout
         title="Software Development"

@@ -12,7 +12,7 @@ const Contact = ({ companyName }: ContactProps) => {
     <main>
       <Seo
         title={`Contact | ${companyName}`}
-        description="Get in touch with TekNiLabs to discuss consulting, software delivery, or training support."
+        description="Contact TekNiLabs to discuss consulting, engineering, or training. Share your goals, timelines, and context and receive a clear, practical next step."
       />
       <SectionLayout
         title="Contact"

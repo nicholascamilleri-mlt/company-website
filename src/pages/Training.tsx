@@ -8,7 +8,7 @@ const Training = () => {
     <main>
       <Seo
         title="Training & Education | TekNiLabs"
-        description="Hands-on technology training for engineers, analysts, and leaders aligned to real delivery goals."
+        description="Hands-on training for engineers, analysts, and leaders, focused on real delivery goals, practical AI skills, and measurable capability growth across teams."
       />
       <SectionLayout
         title="Training & Education"
