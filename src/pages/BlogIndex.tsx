@@ -140,7 +140,8 @@ const BlogIndex = () => {
         <ConsultationOffer
           title="Plan your next digital move"
           description="Talk with TekniLabs about owning your systems, automating repetitive work, and building the right foundation for growth."
-          ctaLabel="Book a strategy chat"
+          ctaLabel="Book a free 30-minute conversation"
+          ctaHref="/business-technology-roadmap"
         />
         <div className={styles.backLink}>
           <Link to="/contact">Ready to go deeper? Contact the team.</Link>

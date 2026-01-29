@@ -1,5 +1,4 @@
 import CTAButton from '../components/CTAButton';
-import ConsultationOffer from '../components/ConsultationOffer';
 import HeroSection from '../components/HeroSection';
 import SectionLayout from '../components/SectionLayout';
 import Seo from '../components/Seo';
@@ -20,10 +19,10 @@ const Home = ({ companyName, tagline }: HomeProps) => {
         description="TekNiLabs delivers consulting, software development, and training to help teams make confident technology decisions."
       />
       <HeroSection
-        title={`${companyName}: ${tagline}`}
-        description="We design, build, and teach practical technology that works in real environments. TekNiLabs helps teams grow capability, deliver software, and make confident technology decisions."
-        ctaLabel="Plan a conversation"
-        ctaHref="/contact"
+        title="Get your business technology roadmap"
+        description="We analyze your business, identify where technology can save time, and map practical ways to improve operations. AI and automation are part of the mix when they make sense. Book a free 30-minute conversation to walk away with clear next steps."
+        ctaLabel="Book a free 30-minute conversation"
+        ctaHref="/business-technology-roadmap"
         kicker={companyName}
       />
 
@@ -71,7 +70,6 @@ const Home = ({ companyName, tagline }: HomeProps) => {
             href="/training"
           />
         </div>
-        <ConsultationOffer className={styles.consultationOffer} />
       </SectionLayout>
 
       <SectionLayout

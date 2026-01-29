@@ -100,7 +100,8 @@ const BlogPost = () => {
         <ConsultationOffer
           title="See what a tailored system could do for you"
           description="Share your goals with TekniLabs and we will outline a practical path from today’s tools to a system you own and control."
-          ctaLabel="Talk with TekniLabs"
+          ctaLabel="Book a free 30-minute conversation"
+          ctaHref="/business-technology-roadmap"
         />
         <div className={styles.moreLinks}>
           <Link to="/blog">Browse more articles</Link>

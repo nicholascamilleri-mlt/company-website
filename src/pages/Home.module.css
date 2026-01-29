@@ -21,10 +21,6 @@
   color: color-mix(in srgb, var(--text-color) 85%, transparent);
 }
 
-.consultationOffer {
-  margin-top: 24px;
-}
-
 @media (max-width: 900px) {
   .grid {
     gap: 20px;

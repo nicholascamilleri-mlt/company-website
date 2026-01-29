@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { loadBranding, type BrandingConfig } from './config/branding';
@@ -11,7 +11,18 @@ import Home from './pages/Home';
 import SoftwareDevelopment from './pages/SoftwareDevelopment';
 import Training from './pages/Training';
 import WhoWeAre from './pages/WhoWeAre';
+import BusinessTechnologyRoadmap from './pages/BusinessTechnologyRoadmap';
 import styles from './App.module.css';
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
   const [branding, setBranding] = useState<BrandingConfig | null>(null);
@@ -46,6 +57,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
+      <ScrollToTop />
       <Header companyName={branding.companyName} logoImage={branding.logoImage} />
       <Routes>
         <Route path="/" element={<Home companyName={branding.companyName} tagline={branding.tagline} />} />
@@ -54,6 +66,7 @@ const App = () => {
         <Route path="/training" element={<Training />} />
         <Route path="/software-development" element={<SoftwareDevelopment />} />
         <Route path="/consulting" element={<Consulting />} />
+        <Route path="/business-technology-roadmap" element={<BusinessTechnologyRoadmap />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/contact" element={<Contact companyName={branding.companyName} />} />
       </Routes>

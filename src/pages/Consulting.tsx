@@ -67,7 +67,11 @@ const Consulting = () => {
               </div>
             </li>
           </ul>
-          <ConsultationOffer className={styles.consultationOffer} />
+          <ConsultationOffer
+            className={styles.consultationOffer}
+            ctaLabel="Book a free 30-minute conversation"
+            ctaHref="/business-technology-roadmap"
+          />
         </div>
       </SectionLayout>
     </main>

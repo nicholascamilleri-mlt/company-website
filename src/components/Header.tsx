@@ -18,7 +18,7 @@ const navItems = [
   { label: 'Contact', path: '/contact' }
 ];
 
-const Header = ({ companyName, logoImage, slogan = 'Systems that learn. Teams that grow.' }: HeaderProps) => {
+const Header = ({ companyName, logoImage, slogan = 'Systems that automate & teams that grow' }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
