@@ -5,6 +5,8 @@ import Header from './components/Header';
 import { loadBranding, type BrandingConfig } from './config/branding';
 import Consulting from './pages/Consulting';
 import Contact from './pages/Contact';
+import BlogIndex from './pages/BlogIndex';
+import BlogPost from './pages/BlogPost';
 import Home from './pages/Home';
 import SoftwareDevelopment from './pages/SoftwareDevelopment';
 import Training from './pages/Training';
@@ -47,6 +49,8 @@ const App = () => {
       <Header companyName={branding.companyName} logoImage={branding.logoImage} />
       <Routes>
         <Route path="/" element={<Home companyName={branding.companyName} tagline={branding.tagline} />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/training" element={<Training />} />
         <Route path="/software-development" element={<SoftwareDevelopment />} />
         <Route path="/consulting" element={<Consulting />} />

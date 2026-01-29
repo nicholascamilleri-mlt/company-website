@@ -15,6 +15,7 @@
   align-items: center;
   justify-content: flex-start;
   min-width: 162px;
+  gap: 12px;
 }
 
 .companyName {
@@ -29,6 +30,16 @@
   width: auto;
   display: block;
   object-fit: contain;
+}
+
+.slogan {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--secondary-color) 70%, transparent);
+  padding-left: 12px;
+  border-left: 1px solid color-mix(in srgb, var(--secondary-color) 18%, transparent);
+  white-space: nowrap;
 }
 
 .nav {
@@ -165,6 +176,10 @@
 
   .logoImage {
     height: 48px;
+  }
+
+  .slogan {
+    display: none;
   }
 
   .backdrop {

@@ -5,18 +5,20 @@ import styles from './Header.module.css';
 type HeaderProps = {
   companyName: string;
   logoImage: string;
+  slogan?: string;
 };
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'Who We Are', path: '/who-we-are' },
   { label: 'Consulting', path: '/consulting' },
-  { label: 'Application Development', path: '/software-development' },
+  { label: 'Engineering', path: '/software-development' },
   { label: 'Training', path: '/training' },
+  { label: 'Blog', path: '/blog' },
+  { label: 'Our Team', path: '/who-we-are' },
   { label: 'Contact', path: '/contact' }
 ];
 
-const Header = ({ companyName, logoImage }: HeaderProps) => {
+const Header = ({ companyName, logoImage, slogan = 'Systems that learn. Teams that grow.' }: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -36,6 +38,9 @@ const Header = ({ companyName, logoImage }: HeaderProps) => {
         ) : (
           <span className={styles.companyName}>{companyName}</span>
         )}
+        <span className={styles.slogan} aria-hidden="true">
+          {slogan}
+        </span>
       </div>
       <button
         type="button"
