@@ -58,8 +58,31 @@
   color: color-mix(in srgb, var(--text-color) 82%, transparent);
 }
 
+.ctaCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  background: color-mix(in srgb, var(--primary-color) 8%, transparent);
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 18%, transparent);
+}
+
+.ctaCard p {
+  margin: 0;
+  max-width: 520px;
+  color: color-mix(in srgb, var(--text-color) 85%, transparent);
+}
+
 @media (max-width: 600px) {
   .primaryPanel {
     padding: 20px;
+  }
+
+  .ctaCard {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

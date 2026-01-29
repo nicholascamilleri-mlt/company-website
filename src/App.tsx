@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -16,8 +16,13 @@ import styles from './App.module.css';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+  const previousPathRef = useRef<string | null>(null);
 
   useEffect(() => {
+    if (previousPathRef.current && previousPathRef.current !== pathname) {
+      sessionStorage.setItem('previousPath', previousPathRef.current);
+    }
+    previousPathRef.current = pathname;
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }, [pathname]);
 

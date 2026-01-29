@@ -1,5 +1,6 @@
 import { FiCheckCircle, FiCode, FiCompass, FiLink } from 'react-icons/fi';
 import { FaRocket } from 'react-icons/fa';
+import CTAButton from '../components/CTAButton';
 import SectionLayout from '../components/SectionLayout';
 import Seo from '../components/Seo';
 import styles from './SoftwareDevelopment.module.css';
@@ -74,6 +75,19 @@ const SoftwareDevelopment = () => {
               </div>
             </li>
           </ul>
+        </div>
+      </SectionLayout>
+
+      <SectionLayout
+        title="Talk to us about your build"
+        subtitle="Share what you are trying to deliver and we will map a practical next step."
+      >
+        <div className={styles.ctaCard}>
+          <p>
+            Tell us about your goals, current stack, and delivery timeline. We will respond with a
+            clear plan, realistic milestones, and the right engagement model.
+          </p>
+          <CTAButton label="Contact us" href="/contact" />
         </div>
       </SectionLayout>
     </main>

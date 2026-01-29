@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react';
 import CTAButton from '../components/CTAButton';
 import SectionLayout from '../components/SectionLayout';
 import Seo from '../components/Seo';
@@ -7,7 +8,73 @@ type ContactProps = {
   companyName: string;
 };
 
+const buildMessageTemplate = (previousPath: string | null) => {
+  if (!previousPath || previousPath === '/contact') {
+    return (
+      'Tell us what you are trying to improve and what success looks like.\n' +
+      '- Goals or outcomes\n' +
+      '- Current challenges or bottlenecks\n' +
+      '- Timeline and budget expectations'
+    );
+  }
+
+  if (previousPath.startsWith('/training')) {
+    return (
+      'We are interested in training for our team.\n' +
+      '- Topics or skills to focus on\n' +
+      '- Team size and roles\n' +
+      '- Desired outcomes and timeline'
+    );
+  }
+
+  if (previousPath.startsWith('/consulting')) {
+    return (
+      'We are looking for consulting support.\n' +
+      '- Business goals and current challenges\n' +
+      '- Areas where you need clarity or guidance\n' +
+      '- Timeline and decision-makers'
+    );
+  }
+
+  if (previousPath.startsWith('/software-development')) {
+    return (
+      'We need help with software development.\n' +
+      '- What you are building or improving\n' +
+      '- Current stack or constraints\n' +
+      '- Milestones, timeline, and budget range'
+    );
+  }
+
+  if (previousPath.startsWith('/blog')) {
+    return (
+      'We read your insights and want to discuss our needs.\n' +
+      '- What stood out from the article\n' +
+      '- Areas you want to improve\n' +
+      '- Timeline and any constraints'
+    );
+  }
+
+  if (previousPath.startsWith('/business-technology-roadmap')) {
+    return (
+      'We would like to discuss our technology roadmap.\n' +
+      '- Current processes that need improvement\n' +
+      '- Where automation or AI may help\n' +
+      '- Timeline and budget expectations'
+    );
+  }
+
+  return (
+    'Tell us what you are trying to improve and what success looks like.\n' +
+    '- Goals or outcomes\n' +
+    '- Current challenges or bottlenecks\n' +
+    '- Timeline and budget expectations'
+  );
+};
+
 const Contact = ({ companyName }: ContactProps) => {
+  const previousPath = useMemo(() => sessionStorage.getItem('previousPath'), []);
+  const [message, setMessage] = useState(() => buildMessageTemplate(previousPath));
+
   return (
     <main>
       <Seo
@@ -30,7 +97,16 @@ const Contact = ({ companyName }: ContactProps) => {
             </label>
             <label>
               What can we help with?
-              <textarea name="message" rows={5} placeholder="Share a short summary." required />
+              <span className={styles.helper}>
+                Share a little context so we can respond with the right next step.
+              </span>
+              <textarea
+                name="message"
+                rows={6}
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                required
+              />
             </label>
             <CTAButton label="Send message" asButton type="submit" />
           </form>
