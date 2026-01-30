@@ -77,7 +77,12 @@ const BusinessTechnologyRoadmap = () => {
                   const isChecked = selectedImprovements.includes(item);
                   const isDisabled = !isChecked && selectionLimitReached;
                   return (
-                    <label key={item} className={styles.checkboxItem}>
+                    <label
+                      key={item}
+                      className={`${styles.checkboxItem} ${isChecked ? styles.checkboxItemSelected : ''} ${
+                        isDisabled ? styles.checkboxItemDisabled : ''
+                      }`}
+                    >
                       <input
                         type="checkbox"
                         name="improvements"
@@ -86,6 +91,7 @@ const BusinessTechnologyRoadmap = () => {
                         onChange={handleImprovementChange(item)}
                         disabled={isDisabled}
                       />
+                      <span className={styles.checkboxIndicator} aria-hidden="true" />
                       <span className={styles.checkboxLabel}>{item}</span>
                     </label>
                   );
@@ -106,11 +112,11 @@ const BusinessTechnologyRoadmap = () => {
               Budget range
               <select name="budget" required>
                 <option value="">Select a range</option>
-                <option value="under-10k">Under $10k</option>
-                <option value="10k-25k">$10k–$25k</option>
-                <option value="25k-50k">$25k–$50k</option>
-                <option value="50k-100k">$50k–$100k</option>
-                <option value="100k-plus">$100k+</option>
+                <option value="under-10k">Under £10k</option>
+                <option value="10k-25k">£10k–£25k</option>
+                <option value="25k-50k">£25k–£50k</option>
+                <option value="50k-100k">£50k–£100k</option>
+                <option value="100k-plus">£100k+</option>
               </select>
             </label>
             <label>
