@@ -1,3 +1,4 @@
+import { useMemo, useState, type ChangeEvent } from 'react';
 import CTAButton from '../components/CTAButton';
 import SectionLayout from '../components/SectionLayout';
 import Seo from '../components/Seo';
@@ -5,6 +6,39 @@ import { FiClock, FiCompass, FiFileText, FiSmile } from 'react-icons/fi';
 import styles from './BusinessTechnologyRoadmap.module.css';
 
 const BusinessTechnologyRoadmap = () => {
+  const improvements = useMemo(
+    () => [
+      'Automate repetitive admin tasks',
+      'Centralize customer and project data',
+      'Improve team handoffs between departments',
+      'Get real-time visibility into operations',
+      'Reduce manual reporting and spreadsheets',
+      'Speed up approvals and decision cycles',
+      'Make onboarding faster and more consistent',
+      'Increase accuracy in billing and invoicing',
+      'Streamline inventory or resource tracking',
+      'Create a better client self-service experience',
+      'Integrate critical tools to reduce context switching',
+      'Strengthen data security and access controls',
+    ],
+    []
+  );
+  const [selectedImprovements, setSelectedImprovements] = useState<string[]>([]);
+  const maxSelections = 3;
+  const selectionLimitReached = selectedImprovements.length >= maxSelections;
+
+  const handleImprovementChange = (value: string) => (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.checked) {
+      if (selectionLimitReached) {
+        event.preventDefault();
+        return;
+      }
+      setSelectedImprovements((prev) => [...prev, value]);
+      return;
+    }
+    setSelectedImprovements((prev) => prev.filter((item) => item !== value));
+  };
+
   return (
     <main>
       <Seo
@@ -34,24 +68,38 @@ const BusinessTechnologyRoadmap = () => {
               <input type="text" name="role" placeholder="Owner, director, operations lead" required />
             </label>
             <fieldset className={styles.fieldset}>
-              <legend>Top 3 pain points to improve with technology</legend>
+              <legend>Top improvements you want from technology (choose up to 3)</legend>
+              <p className={styles.helperText} id="improvements-helper">
+                Select up to {maxSelections}. We will prioritize these in your roadmap.
+              </p>
+              <div className={styles.checkboxList} role="group" aria-describedby="improvements-helper">
+                {improvements.map((item) => {
+                  const isChecked = selectedImprovements.includes(item);
+                  const isDisabled = !isChecked && selectionLimitReached;
+                  return (
+                    <label key={item} className={styles.checkboxItem}>
+                      <input
+                        type="checkbox"
+                        name="improvements"
+                        value={item}
+                        checked={isChecked}
+                        onChange={handleImprovementChange(item)}
+                        disabled={isDisabled}
+                      />
+                      <span className={styles.checkboxLabel}>{item}</span>
+                    </label>
+                  );
+                })}
+              </div>
               <input
+                className={styles.hiddenInput}
                 type="text"
-                name="painPoint1"
-                placeholder="Pain point 1"
+                name="selectedImprovements"
+                value={selectedImprovements.join(', ')}
+                onChange={() => {}}
                 required
-              />
-              <input
-                type="text"
-                name="painPoint2"
-                placeholder="Pain point 2"
-                required
-              />
-              <input
-                type="text"
-                name="painPoint3"
-                placeholder="Pain point 3"
-                required
+                aria-hidden="true"
+                tabIndex={-1}
               />
             </fieldset>
             <label>
