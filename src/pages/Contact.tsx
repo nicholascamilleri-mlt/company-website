@@ -72,7 +72,12 @@ const buildMessageTemplate = (previousPath: string | null) => {
 };
 
 const Contact = ({ companyName }: ContactProps) => {
-  const previousPath = useMemo(() => sessionStorage.getItem('previousPath'), []);
+  const previousPath = useMemo(() => {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+    return window.sessionStorage.getItem('previousPath');
+  }, []);
   const [message, setMessage] = useState(() => buildMessageTemplate(previousPath));
 
   return (
