@@ -29,28 +29,43 @@ const ScrollToTop = () => {
   return null;
 };
 
-const App = () => {
-  const [branding, setBranding] = useState<BrandingConfig | null>(null);
+type AppProps = {
+  initialBranding?: BrandingConfig | null;
+};
+
+const App = ({ initialBranding = null }: AppProps) => {
+  const [branding, setBranding] = useState<BrandingConfig | null>(initialBranding);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (branding) {
+      return;
+    }
+
     const fetchBranding = async () => {
       try {
         const config = await loadBranding();
         setBranding(config);
-        const root = document.documentElement;
-        root.style.setProperty('--primary-color', config.primaryColor);
-        root.style.setProperty('--secondary-color', config.secondaryColor);
-        root.style.setProperty('--background-color', config.backgroundColor);
-        root.style.setProperty('--text-color', config.textColor);
-        root.style.setProperty('--accent-color', config.accentColor);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unable to load branding configuration.');
       }
     };
 
     fetchBranding();
-  }, []);
+  }, [branding]);
+
+  useEffect(() => {
+    if (!branding) {
+      return;
+    }
+
+    const root = document.documentElement;
+    root.style.setProperty('--primary-color', branding.primaryColor);
+    root.style.setProperty('--secondary-color', branding.secondaryColor);
+    root.style.setProperty('--background-color', branding.backgroundColor);
+    root.style.setProperty('--text-color', branding.textColor);
+    root.style.setProperty('--accent-color', branding.accentColor);
+  }, [branding]);
 
   if (error) {
     return <div className={styles.status}>{error}</div>;
