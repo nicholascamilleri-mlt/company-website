@@ -51,6 +51,43 @@ select:focus {
   color: var(--secondary-color);
 }
 
+.helperText {
+  margin: 0;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--secondary-color) 75%, transparent);
+}
+
+.checkboxList {
+  display: grid;
+  gap: 10px;
+}
+
+.checkboxItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.checkboxItem input {
+  margin-top: 3px;
+  accent-color: var(--primary-color);
+}
+
+.checkboxLabel {
+  line-height: 1.3;
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+}
+
 .details {
   display: grid;
   gap: 14px;
