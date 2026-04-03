@@ -1,7 +1,7 @@
 .hero {
-  padding: 96px 6vw 72px;
+  padding: 72px 6vw 52px;
   display: grid;
-  gap: 48px;
+  gap: 32px;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
@@ -32,41 +32,46 @@
 
 .panel {
   position: relative;
-  min-height: 260px;
-  border-radius: 32px;
-  background: color-mix(in srgb, var(--secondary-color) 12%, transparent);
+  min-height: 220px;
+  border-radius: 24px;
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--secondary-color) 10%, transparent),
+    color-mix(in srgb, var(--primary-color) 10%, transparent)
+  );
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 14%, transparent);
   overflow: hidden;
 }
 
 .panelInner {
   position: absolute;
-  inset: 16% 20% 30% 12%;
-  border-radius: 24px;
-  background: color-mix(in srgb, var(--primary-color) 20%, transparent);
+  inset: 14% 22% 32% 12%;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--primary-color) 16%, transparent);
 }
 
 .panelAccent {
   position: absolute;
-  inset: 52% 10% 10% 38%;
-  border-radius: 20px;
-  background: color-mix(in srgb, var(--accent-color) 24%, transparent);
+  inset: 50% 12% 12% 40%;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent-color) 20%, transparent);
 }
 
 @media (max-width: 900px) {
   .hero {
-    padding: 72px 6vw 56px;
-    gap: 32px;
+    padding: 60px 6vw 44px;
+    gap: 28px;
   }
 
   .panel {
-    min-height: 220px;
+    min-height: 190px;
   }
 }
 
 @media (max-width: 600px) {
   .hero {
-    padding: 56px 5vw 40px;
-    gap: 24px;
+    padding: 48px 5vw 34px;
+    gap: 20px;
   }
 
   .title {
@@ -78,6 +83,6 @@
   }
 
   .panel {
-    min-height: 180px;
+    min-height: 160px;
   }
 }
