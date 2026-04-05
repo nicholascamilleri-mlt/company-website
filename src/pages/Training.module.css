@@ -8,6 +8,19 @@
   gap: 18px;
 }
 
+.academyNotice {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--primary-color) 10%, #fff);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 20%, transparent);
+  color: color-mix(in srgb, var(--text-color) 86%, transparent);
+}
+
+.academyNotice a {
+  font-weight: 700;
+}
+
 .areaGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

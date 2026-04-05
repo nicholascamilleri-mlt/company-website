@@ -25,6 +25,18 @@ const Training = () => {
         subtitle="Practical training led by industry practitioners, aligned with real delivery experience."
       >
         <div className={styles.primaryPanel}>
+          <p className={styles.academyNotice}>
+            Looking for self-paced learning? Visit{' '}
+            <a
+              href="https://academy.teknilabs.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit TekNiLabs Academy"
+            >
+              TekNiLabs Academy
+            </a>
+            .
+          </p>
           <div className={styles.areaGrid}>
             <article className={styles.areaCard}>
               <span className={styles.areaIcon} aria-hidden="true">
