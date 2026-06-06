@@ -19,9 +19,17 @@
   opacity: 0.8;
 }
 
+.contact,
 .tradeName {
   font-size: 0.9rem;
   opacity: 0.75;
+}
+
+.contact a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .copy {

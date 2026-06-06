@@ -73,9 +73,23 @@ const App = () => {
         <Route path="/consulting" element={<Consulting />} />
         <Route path="/business-technology-roadmap" element={<BusinessTechnologyRoadmap />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
-        <Route path="/contact" element={<Contact companyName={branding.companyName} />} />
+        <Route
+          path="/contact"
+          element={
+            <Contact
+              companyName={branding.companyName}
+              phoneNumber={branding.phoneNumber}
+              phoneHref={branding.phoneHref}
+            />
+          }
+        />
       </Routes>
-      <Footer companyName={branding.companyName} tagline={branding.tagline} />
+      <Footer
+        companyName={branding.companyName}
+        tagline={branding.tagline}
+        phoneNumber={branding.phoneNumber}
+        phoneHref={branding.phoneHref}
+      />
     </div>
   );
 };
