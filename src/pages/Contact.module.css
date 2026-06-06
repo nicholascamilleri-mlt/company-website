@@ -46,6 +46,17 @@ textarea:focus {
   color: color-mix(in srgb, var(--text-color) 85%, transparent);
 }
 
+.details a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.details a:hover,
+.details a:focus {
+  text-decoration: underline;
+}
+
 .card {
   padding: 20px;
   border-radius: 16px;

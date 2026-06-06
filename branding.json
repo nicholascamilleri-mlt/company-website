@@ -1,6 +1,8 @@
 {
   "companyName": "TekNiLabs",
   "tagline": "Systems that automate & teams that grow",
+  "phoneNumber": "020 4569 0550",
+  "phoneHref": "tel:+442045690550",
   "primaryColor": "#1F8FFF",
   "secondaryColor": "#0B1F33",
   "backgroundColor": "#F7F9FB",
