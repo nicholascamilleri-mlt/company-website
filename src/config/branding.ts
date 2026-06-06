@@ -1,6 +1,8 @@
 export type BrandingConfig = {
   companyName: string;
   tagline: string;
+  phoneNumber: string;
+  phoneHref: string;
   primaryColor: string;
   secondaryColor: string;
   backgroundColor: string;

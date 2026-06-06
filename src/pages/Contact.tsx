@@ -6,6 +6,8 @@ import styles from './Contact.module.css';
 
 type ContactProps = {
   companyName: string;
+  phoneNumber: string;
+  phoneHref: string;
 };
 
 const buildMessageTemplate = (previousPath: string | null) => {
@@ -71,7 +73,7 @@ const buildMessageTemplate = (previousPath: string | null) => {
   );
 };
 
-const Contact = ({ companyName }: ContactProps) => {
+const Contact = ({ companyName, phoneNumber, phoneHref }: ContactProps) => {
   const previousPath = useMemo(() => sessionStorage.getItem('previousPath'), []);
   const [message, setMessage] = useState(() => buildMessageTemplate(previousPath));
 
@@ -79,7 +81,7 @@ const Contact = ({ companyName }: ContactProps) => {
     <main>
       <Seo
         title={`Contact | ${companyName}`}
-        description="Contact TekNiLabs to discuss consulting, engineering, or training. Share your goals, timelines, and context and receive a clear, practical next step."
+        description={`Contact TekNiLabs to discuss consulting, engineering, or training. Call ${phoneNumber}, share your goals, timelines, and context, and receive a clear, practical next step.`}
       />
       <SectionLayout
         title="Contact"
@@ -113,7 +115,8 @@ const Contact = ({ companyName }: ContactProps) => {
           <div className={styles.details}>
             <h3>Contact details</h3>
             <p>
-              Email us directly at <strong>hello@teknlabs.com</strong> or share a note using the form.
+              Call us on <a href={phoneHref}>{phoneNumber}</a>, email us directly at{' '}
+              <a href="mailto:hello@teknlabs.com">hello@teknlabs.com</a>, or share a note using the form.
             </p>
             <p>
               We respond within two business days with a clear next step and a recommended delivery path.
