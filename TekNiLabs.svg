@@ -24,9 +24,8 @@
       <path fill="#1f2630" d="M78 74h178l-9 9H78z" opacity="0.72"/>
     </g>
 
-    <g font-family="Orbitron, Eurostile, 'Arial Narrow', Arial, sans-serif" font-weight="700" font-size="76" letter-spacing="9">
-      <text x="334" y="165" fill="url(#darkMetal)">TEKNI</text>
-      <text x="668" y="165" fill="url(#blueAccent)">LABS</text>
-    </g>
+    <text x="334" y="165" font-family="Orbitron, Eurostile, 'Arial Narrow', Arial, sans-serif" font-weight="700" font-size="76" letter-spacing="7">
+      <tspan fill="url(#darkMetal)">TEKNI</tspan><tspan fill="url(#blueAccent)" dx="-2">LABS</tspan>
+    </text>
   </g>
 </svg>
