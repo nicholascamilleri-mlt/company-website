@@ -21,7 +21,7 @@ const DEFAULT_BRANDING: BrandingConfig = {
   backgroundColor: '#F7F9FB',
   textColor: '#1A1A1A',
   accentColor: '#1F8FFF',
-  logoImage: 'TekNiLabs.png'
+  logoImage: 'TekNiLabs.svg'
 };
 
 export const loadBranding = async (): Promise<BrandingConfig> => {
